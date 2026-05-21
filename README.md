@@ -5,7 +5,7 @@ A full-stack restaurant web application built with React.js, Node.js, Express, a
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page](screenshots/home.png)
+<img width="1919" height="951" alt="home" src="https://github.com/user-attachments/assets/cde4892a-fbcb-4163-8755-8ea874ddc278" />
 
 ### Menu Page
 ![Menu Page](screenshots/menu.png)
