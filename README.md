@@ -1,6 +1,17 @@
 # 🍽️ NovaBite — Restaurant Web Application
 
-A full-stack restaurant web application built as a university group project. NovaBite allows users to browse the menu, order food online, book tables, and manage their accounts.
+A full-stack restaurant web application built with React.js, Node.js, Express, and MongoDB. NovaBite allows users to browse the menu, order food online, book tables, and manage their accounts.
+
+## 📸 Screenshots
+
+### Home Page
+![Home Page](screenshots/home.png)
+
+### Menu Page
+![Menu Page](screenshots/menu.png)
+
+### Reservations Page
+![Reservations Page](screenshots/reservations.png)
 
 ## 🛠️ Technologies Used
 
