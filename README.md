@@ -46,6 +46,17 @@ All forms include both client-side and server-side validation:
 - Registration Form
 - Login Form
 
+## ⭐ Key Features
+
+- **JWT Authentication** — Secure login/register with hashed passwords (bcrypt) and token-based sessions
+- **Shopping Cart** — Add items, adjust quantities, and checkout with a validated form
+- **Protected Routes** — Users must log in before placing an order
+- **Category Filtering** — Filter menu items by Appetizers, Mains, Desserts, and Drinks
+- **Responsive Design** — Works on desktop, tablet, and mobile screens
+- **Dark Theme UI** — Premium glassmorphism design with smooth animations
+- **Google Maps** — Embedded interactive map on the Contact page
+- **Gallery Lightbox** — Click-to-zoom image viewer
+
 ## 🚀 How to Run
 
 ### Prerequisites
@@ -96,10 +107,23 @@ NovaBite/
 └── .gitignore
 ```
 
+## 🔌 API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/menu` | Get all menu items (optional `?category=` filter) |
+| GET | `/api/menu/featured` | Get featured menu items for Home page |
+| POST | `/api/auth/register` | Register a new user |
+| POST | `/api/auth/login` | Login and receive JWT token |
+| POST | `/api/orders` | Place an order (requires authentication) |
+| POST | `/api/reservations` | Create a table reservation |
+| POST | `/api/contacts` | Submit contact form message |
+| POST | `/api/newsletter` | Subscribe to newsletter |
+
 ## 👥 Team
 
 | Member | Pages |
 |--------|-------|
-| Student 1 | Home, Menu, Reservations |
-| Student 2 | Contact, About, Gallery |
-| Student 3 | Order Online, Register, Login |
+| Omar Elhadidi | Home, Menu, Reservations |
+| Kenzy Baher | Contact, About, Gallery |
+| Hana Hazem | Order Online, Register, Login |
