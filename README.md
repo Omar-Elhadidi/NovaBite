@@ -8,10 +8,10 @@ A full-stack restaurant web application built with React.js, Node.js, Express, a
 <img width="1919" height="951" alt="home" src="https://github.com/user-attachments/assets/cde4892a-fbcb-4163-8755-8ea874ddc278" />
 
 ### Menu Page
-![Menu Page](screenshots/menu.png)
+<img width="1919" height="950" alt="menu" src="https://github.com/user-attachments/assets/d1afb81a-f3b2-4e28-823b-635f28c985da" />
 
 ### Reservations Page
-![Reservations Page](screenshots/reservations.png)
+<img width="1919" height="954" alt="reservations" src="https://github.com/user-attachments/assets/00e6ed10-9d9e-421c-939b-aac6885db700" />
 
 ## 🛠️ Technologies Used
 
