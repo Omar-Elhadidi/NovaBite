@@ -124,6 +124,6 @@ NovaBite/
 
 | Member | Pages |
 |--------|-------|
-| Omar Elhadidi | Home, Menu, Reservations |
-| Kenzy Baher | Contact, About, Gallery |
-| Hana Hazem | Order Online, Register, Login |
+| [Omar Elhadidi](https://github.com/Omar-Elhadidi) | Home, Menu, Reservations |
+| [Kenzy Baher](https://github.com/kenzybaher) | Contact, About, Gallery |
+| [Hana Hazem](https://github.com/hanahazem) | Order Online, Register, Login |
