@@ -1,4 +1,9 @@
-# 🍽️ NovaBite — Restaurant Web Application 
+# 🍽️ NovaBite — Restaurant Web Application
+
+![React](https://img.shields.io/badge/React-Vite-61DAFB?logo=react)
+![Node.js](https://img.shields.io/badge/Backend-Node.js-339933?logo=node.js)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-47A248?logo=mongodb)
+![JWT](https://img.shields.io/badge/Auth-JWT-000000?logo=jsonwebtokens)
 
 A full-stack restaurant web application built with React.js, Node.js, Express, and MongoDB. NovaBite allows users to browse the menu, order food online, book tables, and manage their accounts.
 
