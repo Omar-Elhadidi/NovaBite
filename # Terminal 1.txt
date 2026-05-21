@@ -1,8 +1,0 @@
-# Terminal 1
-cd server
-node seed.js       
-node server.js
-
-# Terminal 2
-cd client
-npm run dev
