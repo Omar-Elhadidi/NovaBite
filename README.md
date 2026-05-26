@@ -1,6 +1,6 @@
 # 🍽️ NovaBite — Restaurant Web Application
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Click_Here-FF4B4B?style=for-the-badge)](https://YOUR-NEW-LINK.up.railway.app
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Click_Here-FF4B4B?style=for-the-badge)](https://novabite.up.railway.app/)
 
 ![React](https://img.shields.io/badge/React-Vite-61DAFB?logo=react)
 ![Node.js](https://img.shields.io/badge/Backend-Node.js-339933?logo=node.js) 
