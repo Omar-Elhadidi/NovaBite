@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FiCalendar, FiClock, FiUsers } from 'react-icons/fi';
 import axios from 'axios';
+import API_URL from '../api';
 
 function Reservations() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', date: '', time: '', partySize: '', specialRequests: '' });
@@ -29,7 +30,7 @@ function Reservations() {
     if (!validate()) return;
     setLoading(true);
     try {
-      await axios.post('http://localhost:5000/api/reservations', { ...form, partySize: Number(form.partySize) });
+      await axios.post(`${API_URL}/api/reservations`, { ...form, partySize: Number(form.partySize) });
       setToast({ type: 'success', msg: 'Reservation confirmed! We look forward to seeing you.' });
       setForm({ name: '', email: '', phone: '', date: '', time: '', partySize: '', specialRequests: '' });
       setErrors({});

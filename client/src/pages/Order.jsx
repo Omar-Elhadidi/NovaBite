@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { FiPlus, FiMinus, FiTrash2, FiShoppingCart, FiX } from 'react-icons/fi';
 import { CartContext, AuthContext } from '../App';
 import axios from 'axios';
+import API_URL from '../api';
 
 function Order() {
   const [items, setItems] = useState([]);
@@ -20,7 +21,7 @@ function Order() {
 
   useEffect(() => {
     setLoading(true);
-    const url = category === 'all' ? 'http://localhost:5000/api/menu' : `http://localhost:5000/api/menu?category=${category}`;
+    const url = category === 'all' ? `${API_URL}/api/menu` : `${API_URL}/api/menu?category=${category}`;
     axios.get(url).then(r => { setItems(r.data); setLoading(false); }).catch(() => setLoading(false));
   }, [category]);
 
@@ -62,7 +63,7 @@ function Order() {
     try {
       const config = { headers: { Authorization: `Bearer ${user.token}` } };
       const orderItems = cartItems.map(i => ({ menuItem: i._id, name: i.name, price: i.price, quantity: i.quantity }));
-      await axios.post('http://localhost:5000/api/orders', { ...form, items: orderItems, totalAmount: cartTotal }, config);
+      await axios.post(`${API_URL}/api/orders`, { ...form, items: orderItems, totalAmount: cartTotal }, config);
       setToast({ type: 'success', msg: 'Order placed successfully! Your food is being prepared.' });
       clearCart();
       setForm({ customerName: '', customerEmail: '', customerPhone: '', address: '', notes: '' });

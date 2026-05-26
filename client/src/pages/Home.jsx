@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 import { FiStar, FiClock, FiAward, FiHeart, FiArrowRight } from 'react-icons/fi';
 import { RiDoubleQuotesR } from 'react-icons/ri';
 import axios from 'axios';
+import API_URL from '../api';
 
 function Home() {
   const [featured, setFeatured] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/menu/featured')
+    axios.get(`${API_URL}/api/menu/featured`)
       .then(res => setFeatured(res.data))
       .catch(() => {});
   }, []);

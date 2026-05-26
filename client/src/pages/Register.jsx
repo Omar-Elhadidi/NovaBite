@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { FiUser, FiMail, FiLock, FiPhone } from 'react-icons/fi';
 import { AuthContext } from '../App';
 import axios from 'axios';
+import API_URL from '../api';
 
 function Register() {
   const [form, setForm] = useState({ name: '', email: '', password: '', confirmPassword: '', phone: '' });
@@ -29,7 +30,7 @@ function Register() {
     if (!validate()) return;
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/register', {
+      const res = await axios.post(`${API_URL}/api/auth/register`, {
         name: form.name, email: form.email, password: form.password, phone: form.phone
       });
       login(res.data);

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { FiPlus } from 'react-icons/fi';
 import { CartContext } from '../App';
 import axios from 'axios';
+import API_URL from '../api';
 
 function Menu() {
   const [items, setItems] = useState([]);
@@ -12,7 +13,7 @@ function Menu() {
 
   useEffect(() => {
     setLoading(true);
-    const url = category === 'all' ? 'http://localhost:5000/api/menu' : `http://localhost:5000/api/menu?category=${category}`;
+    const url = category === 'all' ? `${API_URL}/api/menu` : `${API_URL}/api/menu?category=${category}`;
     axios.get(url)
       .then(res => { setItems(res.data); setLoading(false); })
       .catch(() => setLoading(false));

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FiPhone, FiMail, FiMapPin, FiClock } from 'react-icons/fi';
 import axios from 'axios';
+import API_URL from '../api';
 
 function Contact() {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
@@ -25,7 +26,7 @@ function Contact() {
     if (!validate()) return;
     setLoading(true);
     try {
-      await axios.post('http://localhost:5000/api/contacts', form);
+      await axios.post(`${API_URL}/api/contacts`, form);
       setToast({ type: 'success', msg: 'Message sent! We\'ll get back to you shortly.' });
       setForm({ name: '', email: '', subject: '', message: '' });
       setErrors({});

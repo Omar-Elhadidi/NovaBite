@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { FiMail, FiLock } from 'react-icons/fi';
 import { AuthContext } from '../App';
 import axios from 'axios';
+import API_URL from '../api';
 
 function Login() {
   const [form, setForm] = useState({ email: '', password: '' });
@@ -26,7 +27,7 @@ function Login() {
     if (!validate()) return;
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', form);
+      const res = await axios.post(`${API_URL}/api/auth/login`, form);
       login(res.data);
       setToast({ type: 'success', msg: 'Welcome back!' });
       setTimeout(() => navigate('/'), 1500);

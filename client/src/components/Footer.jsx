@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiFacebook, FiInstagram, FiTwitter, FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
 import axios from 'axios';
+import API_URL from '../api';
 
 function Footer() {
   const [email, setEmail] = useState('');
@@ -11,7 +12,7 @@ function Footer() {
     e.preventDefault();
     if (!email) { setMsg('Please enter your email'); return; }
     try {
-      const res = await axios.post('http://localhost:5000/api/newsletter', { email });
+      const res = await axios.post(`${API_URL}/api/newsletter`, { email });
       setMsg(res.data.message);
       setEmail('');
       setTimeout(() => setMsg(''), 3000);
