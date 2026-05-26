@@ -109,7 +109,7 @@ NovaBite/
 │   ├── middleware/          # JWT authentication
 │   ├── models/             # 6 Mongoose schemas
 │   ├── routes/             # 6 API route files
-│   ├── seed.js             # Database seeder
+│   ├── seedData.js         # Initial database data
 │   └── server.js           # Express entry point
 └── .gitignore
 ```
