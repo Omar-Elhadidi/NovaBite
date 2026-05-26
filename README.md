@@ -1,5 +1,7 @@
 # 🍽️ NovaBite — Restaurant Web Application
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Click_Here-FF4B4B?style=for-the-badge)](https://YOUR-NEW-LINK.up.railway.app
+
 ![React](https://img.shields.io/badge/React-Vite-61DAFB?logo=react)
 ![Node.js](https://img.shields.io/badge/Backend-Node.js-339933?logo=node.js) 
 ![MongoDB](https://img.shields.io/badge/Database-MongoDB-47A248?logo=mongodb)
@@ -62,7 +64,7 @@ All forms include both client-side and server-side validation:
 - **Google Maps** — Embedded interactive map on the Contact page
 - **Gallery Lightbox** — Click-to-zoom image viewer
 
-## 🚀 How to Run
+## 🚀 How to Run Locally
 
 ### Prerequisites
 - Node.js installed
@@ -78,7 +80,7 @@ cd NovaBite
 ```bash
 cd server
 npm install
-node seed.js        # Seeds menu items (run once)
+# The database will auto-seed with menu items on first run
 node server.js      # Starts API on port 5000
 ```
 
