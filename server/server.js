@@ -1,11 +1,20 @@
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
+const MenuItem = require('./models/MenuItem');
 
 const app = express();
 
-// Connect to MongoDB
-connectDB();
+// Connect to MongoDB and auto-seed if empty
+const startServer = async () => {
+  await connectDB();
+  const count = await MenuItem.countDocuments();
+  if (count === 0) {
+    const { menuItems } = require('./seedData');
+    await MenuItem.insertMany(menuItems);
+    console.log('Database auto-seeded with menu items!');
+  }
+};
 
 // Middleware
 const allowedOrigins = [
@@ -32,6 +41,8 @@ app.get('/api/health', (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+startServer().then(() => {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
 });
